@@ -1,0 +1,526 @@
+.main-container {
+    background-color: #ffffff;
+  }
+  
+  .carousel-inner img {
+      width: 100%; /* O un porcentaje menor si no quieres que ocupe todo */
+      height: 500px; /* Ajusta la altura según lo necesites */
+      object-fit: cover; /* Ajusta la imagen sin deformarla */
+    }
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ajusta la imagen sin deformarla */
+  }
+  
+  .aboutus-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  /* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--color-texto);
+}
+
+
+/* Solución garantizada para el espaciado */
+.spacer-section {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-wrapper {
+  position: relative;
+  margin-top: 200px !important;
+  padding-top: 50px;
+  z-index: 10;
+}
+
+/* Reset para posibles conflictos */
+.container.mt-5 .row.practice-areas {
+  margin-bottom: 0 !important;
+}
+
+
+
+/* Espaciado y contenedor */
+.container.mt-5 {
+  margin-top: 3rem;
+  padding: 0 15px;
+}
+
+/* Contenedor de tarjetas */
+.practice-areas {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Estilo base de cada tarjeta */
+.practice-area {
+  perspective: 1000px;
+  height: 220px; /* Altura uniforme */
+  padding: 10px;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.practice-area:hover .card-wrapper {
+  transform: rotateY(180deg);
+}
+
+/* Caras de la tarjeta */
+.first-content, .second-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.first-content {
+  background: #ffffff;
+  color: #2c3e50;
+}
+
+.second-content {
+  background: #f8f9fa;
+  color: #495057;
+  transform: rotateY(180deg);
+}
+
+/* Contenido específico */
+.flip-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.first-content h3 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.second-content p {
+  margin: 8px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.second-content i {
+  margin-right: 10px;
+  color: #3498db;
+  font-size: 1.1rem;
+  min-width: 20px;
+}
+
+/* Animaciones */
+@keyframes anim-down {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-down {
+  animation: anim-down 0.6s ease forwards;
+}
+
+.anim-pause-1 { animation-delay: 0.2s; }
+.anim-pause-2 { animation-delay: 0.4s; }
+.anim-pause-3 { animation-delay: 0.6s; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .practice-area {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .practice-area {
+    height: 180px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .first-content, .second-content {
+    padding: 20px;
+  }
+  
+  .flip-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .first-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .second-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .practice-area {
+    height: 160px;
+  }
+  
+  .first-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+body {
+  background: #0a192f; /* Fondo oscuro para mejor contraste */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.neon-container {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(10, 25, 47, 0.7);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(100, 181, 246, 0.2);
+}
+
+.neon-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #64b5f6; /* Color celeste base */
+  text-shadow: 
+      0 0 5px #fff,
+      0 0 10px #64b5f6,
+      0 0 15px #64b5f6,
+      0 0 20px #64b5f6;
+  animation: textGlow 2s ease-in-out infinite alternate;
+  margin-bottom: 1.5rem;
+}
+
+/* Versión mejorada de la animación */
+@keyframes textGlow {
+  0% {
+      text-shadow: 
+          0 0 5px #fff,
+          0 0 10px #64b5f6,
+          0 0 15px #64b5f6;
+  }
+  50% {
+      text-shadow: 
+          0 0 10px #fff,
+          0 0 20px #64b5f6,
+          0 0 30px #64b5f6,
+          0 0 40px #64b5f6;
+  }
+  100% {
+      text-shadow: 
+          0 0 5px #fff,
+          0 0 15px #64b5f6,
+          0 0 25px #64b5f6;
+  }
+}
+
+.neon-subtitle {
+  color: #bbdefb; /* Celeste más claro */
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.neon-btn {
+  background: transparent;
+  border: 2px solid #64b5f6;
+  color: #bbdefb;
+  padding: 0.8rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.neon-btn:hover {
+  background: rgba(100, 181, 246, 0.2);
+  box-shadow: 0 0 20px rgba(100, 181, 246, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Efecto de partículas celestes de fondo */
+.particle {
+  position: absolute;
+  background: #64b5f6;
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float 15s infinite linear;
+  z-index: -1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-100vh) rotate(360deg); }
+}
+
+.wave-card {
+  width: 300px;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(100, 181, 246, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+.wave-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(100, 181, 246, 0.3);
+}
+
+.wave-card::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path fill="%2364b5f6" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"/></svg>');
+  background-size: cover;
+  transition: bottom 0.6s ease;
+  z-index: -1;
+}
+
+.wave-card:hover::after {
+  bottom: 0;
+}
+
+.wave-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  transition: transform 0.4s;
+}
+
+.wave-card:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.wave-card h3 {
+  color: #1E88E5;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.wave-card p {
+  color: #546E7A;
+  margin: 1rem 0;
+}
+
+.wave-card .btn {
+  background: #1E88E5;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.wave-card .btn:hover {
+  background: #1565C0;
+  transform: translateY(-2px);
+}
+
+
+/* Contacto */
+.contact-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 20px;
+}
+
+.floating-form {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 30px;
+}
+
+.form-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10px, 10px); }
+}
+
+.contact-form {
+  position: relative;
+  z-index: 3;
+}
+
+.form-title {
+  color: #1e88e5;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s;
+}
+
+.input-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input-group label {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  color: #757575;
+  background: white;
+  padding: 0 5px;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: #64b5f6;
+  box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.2);
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #1e88e5;
+  background: white;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #64b5f6, #1e88e5);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(30, 136, 229, 0.4);
+}
+
+.submit-btn i {
+  margin-left: 8px;
+}
+
+
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0; /* Inicialmente invisible */
+}
+
+/* Animación personalizada (si no usas Animate.css) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate__fadeIn {
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
