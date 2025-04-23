@@ -10,4 +10,9 @@ import {  RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 
+  isCollapsed = true;
+
+  toggleMenu() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }

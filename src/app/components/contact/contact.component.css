@@ -66,6 +66,27 @@ body {
 }
 
 
+.wave-card {
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.wave-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-color: #e0e0e0;
+}
+
+/* Asegura igual altura en todas las tarjetas */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+}
 
 /* Espaciado y contenedor */
 .container.mt-5 {
